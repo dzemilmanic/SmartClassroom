@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1733579457761,
+    "title": "Domaći zadatak - Matematika",
+    "description": "Izračunajte zadatke sa strane 20, 21 i 22 iz učbenika.",
+    "type": "Domaci",
+    "createdBy": 1733579557765,
+    "classroomId": "64d1f2a8b9c33e1e7b9a7c01",
+    "date": "2024-12-15",
+    "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    "id": 1744479457761,
+    "title": "Čitanje - Levo i desno",
+    "description": "Pročitajte tekst na strani 30 i napišite sažetak.",
+    "type": "Knjiga",
+    "createdBy": 1733579557765,
+    "classroomId": "64d1f2a8b9c33e1e7b9a7c01",
+    "date": "2024-12-20",
+    "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    "id": 1733644383498,
+    "title": "Hemija",
+    "description": "U prilogu se nalazi link on udzbenika iz predmeta ,,Hemija'' koji mozete poruciti preko knjizare Vulkan.",
+    "type": "Knjiga",
+    "createdBy": "1733595133431",
+    "classroomId": "II-1",
+    "link": "https://www.knjizare-vulkan.rs/hemija/5103-organska-hemija",
+    "date": "2024-12-08T07:53:03.498Z"
+  },
+  {
+    "id": 1733644468664,
+    "title": "Fizika",
+    "description": "U prilogu se nalazi PDF skripta za spremanje prijemnog ispita iz predmeta ,,Fizika''.",
+    "type": "Skripta",
+    "createdBy": "1733595133431",
+    "classroomId": "II-1",
+    "link": "https://www.skopalic.edu.rs/t_mydownload/17_18/priprema-za-maturu-(skripte).pdf",
+    "date": "2024-12-08T07:54:28.664Z"
+  },
+  {
+    "id": 1733644528367,
+    "title": "Matematika",
+    "description": "U prilogu se nalazi link do domaceg zadatka iz predmeta ,,Matematika'' koji je potrebno uraditi.",
+    "type": "Domaci",
+    "createdBy": "1733595133431",
+    "classroomId": "II-1",
+    "link": "https://www.scribd.com/document/664017620/Matematika-domaci",
+    "date": "2024-12-08T07:55:28.367Z"
+  }
+]
