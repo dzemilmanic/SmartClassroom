@@ -1,0 +1,87 @@
+.lost-and-found {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f8ff; 
+}
+
+.add-material {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.add-material:hover {
+  background-color: #218838;
+}
+
+.lost-and-found-container {
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.even-card {
+  background-color: #f8f9fa; 
+}
+
+.odd-card {
+  background-color: #e9ecef; 
+}
+.lost-and-found-card {
+  width: 300px;
+  margin: auto;
+  margin-bottom: 2%;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.lost-and-found-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.lost-and-found-card h1 {
+  font-size: 1.25rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.lost-and-found-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.lost-and-found-card .author {
+  font-weight: bolder;
+}
+
+.lost-and-found-card .date {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}

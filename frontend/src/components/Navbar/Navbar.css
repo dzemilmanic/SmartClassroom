@@ -1,0 +1,113 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgb(146,149,247);
+  background: linear-gradient(90deg, rgba(146,149,247,1) 0%, rgba(66,69,255,1) 94%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar-hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #1a1a2e;
+    align-items: center;
+    padding: 1rem 0;
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+
+  .navbar-links.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .navbar-links a {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-hamburger {
+    display: flex;
+  }
+
+  .navbar-hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbar-hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+.navbar .dropdown select {
+  background: none; 
+  border: none; 
+  color: white; 
+  font-size: 1rem; 
+  font-weight: 500; 
+  text-decoration: none; 
+  cursor: pointer; 
+  transition: color 0.3s ease, transform 0.3s ease; 
+  padding: 0; 
+}
+.navbar .dropdown select:hover {
+  color: black;
+  transform: scale(1.1); 
+}
+
+.navbar .dropdown {
+  display: inline-block;
+}

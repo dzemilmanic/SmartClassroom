@@ -1,0 +1,96 @@
+/* General styles for the etiquette game container */
+.etiquette-container {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 25px;
+  max-width: 650px;
+  margin: 50px auto;
+  background-color: #f4f7f6;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.etiquette-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Styling for the question and options section */
+.etiquette-game-question {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.etiquette-game-question h3 {
+  font-size: 20px;
+  color: #34495e;
+  margin-bottom: 25px;
+}
+
+/* Style for individual option buttons */
+.etiquette-option-button {
+  display: block;
+  width: 95%;
+  padding: 15px 20px;
+  margin: 15px auto;
+  background-color: #ecf0f1;
+  color: #333;
+  font-size: 18px;
+  text-align: center;
+  border: 2px solid #bdc3c7;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.etiquette-option-button:hover {
+  background-color: #d1f2eb;
+  border-color: #1abc9c;
+  transform: scale(1.03);
+}
+
+.etiquette-option-button:focus {
+  outline: none;
+  border-color: #16a085;
+  background-color: #b8e994;
+}
+
+/* Game over section */
+.etiquette-game-over {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.etiquette-game-over h3 {
+  font-size: 26px;
+  color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+.etiquette-game-over p {
+  font-size: 18px;
+  color: #34495e;
+}
+
+/* Restart button */
+.etiquette-restart-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.etiquette-restart-button:hover {
+  background-color: #1e8449;
+  transform: scale(1.05);
+}

@@ -1,0 +1,109 @@
+.test-container {
+    text-align: center;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .timer {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .answers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrap on smaller screens */
+  }
+  
+  .answer-button {
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 45%;
+    margin: 5px;
+  }
+  
+  .answer-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  button {
+    padding: 12px 24px;
+    margin: 15px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 200px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #e60000;
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  button:active,
+  .answer-button:active {
+    transform: scale(0.98); /* Slight shrink effect on button click */
+  }
+  
+  .test-selection-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+  }
+  
+  .test-selection-buttons button {
+    width: 150px; /* Fixed width for buttons */
+    font-size: 18px;
+  }
+  
+  .test-selection-buttons button:hover {
+    background-color: #e60000;
+  }
+  
+  .test-selection-buttons button:focus {
+    outline: none;
+    border: 2px solid #f44336;
+  }
+  
+  h3,
+  p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-style: italic;
+    font-size: 20px;
+  }

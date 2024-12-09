@@ -1,0 +1,50 @@
+.error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .error-content h1 {
+    font-size: 8rem;
+    color: #6366f1;
+    margin: 0;
+    animation: bounce 2s infinite;
+  }
+  
+  .error-content h2 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 1rem;
+  }
+  
+  .error-content p {
+    color: #4b5563;
+    margin-bottom: 2rem;
+  }
+  
+  .error-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #6366f1;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .error-btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
