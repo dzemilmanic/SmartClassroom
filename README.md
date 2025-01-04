@@ -1,82 +1,83 @@
-# Full-Stack Web Aplikacija za Osnovne Škole
+# Full-Stack Web Application for Primary Schools
 
-Ova aplikacija je dizajnirana za osnovne škole i omogućava učenicima, učiteljima, roditeljima i administratorima da pristupe različitim funkcijama kao što su nastavni materijali, obavestenja, sastanci, AI chat za podršku nastavi, API za analizu slika, sistem za izgubljeno/nadjeno, i još mnogo toga.
+This application is designed for primary schools and allows students, teachers, parents, and administrators to access various features such as teaching materials, notifications, meetings, AI chat for class support, an image analysis API, a lost and found system, and much more.
 
-## Funkcionalnosti
+## Features
 
-### Za decu
+### For Students
 
-- **Nastavni materijali**: Pristup različitim materijalima za učenje i zadatke.
-- **AI Chat**: Chat sa AI asistentom koji odgovara na pitanja vezana za nastavu (ograničen na obrazovne teme).
-- **Interaktivni kviz**: Kviz o bezbednosti na internetu sa pitanjima i odgovorima.
+- **Teaching Materials**: Access to various learning materials and assignments.
+- **AI Chat**: Chat with an AI assistant that answers questions related to the curriculum (limited to educational topics).
+- **Interactive Quiz**: A quiz on internet safety with questions and answers.
 
-### Za razredne i učitelje
+### For Teachers
 
-- **Nastavni materijali**: Mogućnost dodavanja novih nastavnih materijala.
-- **Obavestenja**: Slanje obavestenja učenicima i roditeljima o važnim događajima.
-- **Sastanci**: Organizovanje sastanaka sa učenicima i roditeljima.
+- **Teaching Materials**: Ability to add new teaching materials.
+- **Notifications**: Sending notifications to students and parents about important events.
+- **Meetings**: Organizing meetings with students and parents.
 
-### Za roditelje
+### For Parents
 
-- **Obavestenja**: Pristup obavestenjima vezanim za decu i školu.
-- **Sastanci**: Mogućnost učešća u sastancima sa učiteljima i razrednim.
+- **Notifications**: Access to notifications related to their children and the school.
+- **Meetings**: Ability to participate in meetings with teachers and class leaders.
 
-### Za administratore
+### For Administrators
 
-- **Upravljanje korisnicima**: Dodavanje novih korisnika (učenici, učitelji, roditelji).
+- **User Management**: Adding new users (students, teachers, parents).
 
-### Dodatne funkcionalnosti
+### Additional Features
 
-- **AI API za analizu slika**: Pošaljite sliku i dobićete opis onoga što se nalazi na slici (koristi se za edukativne svrhe).
-- **Izgubljeno/Nadjeno**: Sistem za prijavu i pregledanje izgubljenih i pronađenih predmeta unutar škole.
-- **Uređivanje korisničkog profila**: Korisnici mogu menjati svoje lične podatke i postavke.
+- **AI Image Analysis API**: Send an image and get a description of what is in the image (used for educational purposes).
+- **Lost and Found**: A system for reporting and viewing lost and found items within the school.
+- **Edit User Profile**: Users can change their personal details and settings.
 
-## Tehnologije
+## Technologies
 
 - **Frontend**: React.js
 - **Backend**: Node.js +
-  - JWT (JSON Web Token) za autentifikaciju korisnika
-- **AI API**: Koristi spoljne API-je za analizu slika i generisanje odgovora u AI chatu
+  - JWT (JSON Web Token) for user authentication
+- **AI API**: Uses external APIs for image analysis and generating responses in the AI chat
 
-## Pokretanje Aplikacije
+## Running the Application
 
-1. **Instalacija Frontenda**
+1. **Frontend Installation**
 
-   - Preuzmite ili klonirajte repozitorijum:
+   - Clone or download the repository:
      ```bash
-     git clone https://github.com/DzemilManic/SmartRazred.git
+     git clone https://github.com/DzemilManic/SmartClassroom.git
      ```
-   - Pređite u direktorijum:
+   - Navigate to the frontend directory:
      ```bash
-     cd SmartRazred/frontend
+     cd SmartClassroom/frontend
      ```
-   - Instalirajte zavisnosti:
+   - Install dependencies:
      ```bash
      npm install
      ```
-   - Pokrenite aplikaciju:
+   - Run the application:
      ```bash
      npm run dev
      ```
 
-2. **Instalacija Backenda**
-   - Pređite u direktorijum backend-a:
+2. **Backend Installation**
+   - Navigate to the backend directory:
      ```bash
-     cd SmartRazred/server
+     cd SmartClassroom/server
      ```
-   - Instalirajte zavisnosti:
+   - Install dependencies:
      ```bash
      npm install
      ```
-   - Pokrenite server:
+   - Start the server:
      ```bash
      npm start
      ```
 
 ## Contributing
 
-Ako želite doprineti razvoju ove aplikacije, možete otvoriti pull request ili prijaviti bugove kroz [issues](https://github.com/DzemilManic/SmartRazred/issues).
+If you want to contribute to the development of this application, you can open a pull request or report bugs through [issues](https://github.com/DzemilManic/SmartRazred/issues).
 
-## Licenca
+## License
 
-Ova aplikacija je licencirana pod [MIT licencom](LICENSE).
+This application is licensed under the [MIT License](LICENSE).
+"""
