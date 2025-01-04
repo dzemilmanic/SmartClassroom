@@ -52,19 +52,19 @@ function EditProfile() {
   const validate = () => {
     const errors = {};
     if (!nameRegex.test(profile.firstName)) {
-      errors.firstName = "Ime mora imati najmanje 2 slova i najvise 30";
+      errors.firstName = "The name must be at least 2 characters long and no more than 30";
     }
     if (!nameRegex.test(profile.lastName)) {
-      errors.lastName = "Prezime mora imati najmanje 2 slova i najvise 30";
+      errors.lastName = "The last name must be at least 2 characters long and no more than 30.";
     }
     if (!emailRegex.test(profile.email)) {
-      errors.email = "Email nije validan";
+      errors.email = "The email is not valid.";
     }
     if (!phoneRegex.test(profile.phone)) {
-      errors.phone = "Broj telefona mora imati 10 cifara";
+      errors.phone = "The phone number must have 10 digits.";
     }
     if (!addressRegex.test(profile.address)) {
-      errors.address = "Adresa mora imati najmanje 5 slova i najvise 100";
+      errors.address = "The address must be at least 5 characters long and no more than 100.";
     }
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -102,13 +102,13 @@ function EditProfile() {
 
   return (
     <>
-      <Header title={"Izmeni profil"} />
+      <Header title={"Change profile info"} />
       <div className="edit-profile">
         <div className="profile-form-container">
           <form onSubmit={handleSubmit} className="profile-form">
             <div className="form-row">
               <div className="form-group">
-                <label style={{color:"white"}}>Ime</label>
+                <label style={{color:"white"}}>First Name</label>
                 <input
                   type="text"
                   value={profile.firstName}
@@ -122,7 +122,7 @@ function EditProfile() {
                 )}
               </div>
               <div className="form-group">
-                <label style={{color:"white"}}>Prezime</label>
+                <label style={{color:"white"}}>Last Name</label>
                 <input
                   type="text"
                   value={profile.lastName}
@@ -151,7 +151,7 @@ function EditProfile() {
               )}
             </div>
             <div className="form-group">
-              <label style={{color:"white"}}>Telefon</label>
+              <label style={{color:"white"}}>Phone</label>
               <input
                 type="tel"
                 value={profile.phone}
@@ -165,7 +165,7 @@ function EditProfile() {
               )}
             </div>
             <div className="form-group">
-              <label style={{color:"white"}}>Adresa</label>
+              <label style={{color:"white"}}>Address</label>
               <input
                 value={profile.address}
                 onChange={(e) =>
@@ -179,7 +179,7 @@ function EditProfile() {
             </div>
             {!loading && (
               <button type="submit" className="submit-btn">
-                Sačuvaj promene
+                Save changes
               </button>
             )}
             {loading && <Loader />}
@@ -190,8 +190,8 @@ function EditProfile() {
               onClose={() => setIsModalOpen(false)}
               errorMessage={error}
             >
-              <h2>Greška</h2>
-              <p>Profil nije izmenjen</p>
+              <h2>Error</h2>
+              <p>Profile is not changed</p>
             </Modal>
           )}
         </div>

@@ -18,8 +18,8 @@ const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_TOKEN;
 const API_ENDPOINT = "https://models.inference.ai.azure.com";
 const MODEL_NAME = "gpt-4o-mini";
 const role = localStorage.getItem('role');
-const deteMessage = "Niposto ne odgovarati na pitanja koja nisu vezana u vezi skole! Objasni mi stvari kao da sam dete u osnovnoj skoli. Koristi emodzije i pisi jasno i precizno. Ne koristi podebljan tekst.";
-const razredniMessage = "Niposto ne odgovarati na pitanja koja nisu vezana u vezi skole! Objasni mi stvari kao profesoru u osnovnoj skoli. Pisi precizno i jasno. Ne koristi podebljan tekst";
+const deteMessage = "Never answer questions that are not related to school! Explain things to me as if I were a child in elementary school. Use emojis and write clearly and precisely. Do not use bold text.";
+const razredniMessage = "Never answer questions that are not related to school! Explain things to me like a teacher in elementary school. Write clearly and precisely. Do not use bold text.";
 const systemMessage = {
   role: "system",
   content: role === "Razredni" ? razredniMessage : deteMessage,
@@ -31,7 +31,7 @@ function Chat() {
 
   const [messages, setMessages] = useState([
     {
-      message: "Zdravo ja sam vaš asistent kako Vam mogu pomoći!",
+      message: "Hello, I am your assistant. How can I help you?",
       sentTime: "just now",
       direction: "incoming",
       sender: "Asistent",
@@ -83,7 +83,7 @@ function Chat() {
         },
       ]);
     } catch (error) {
-      console.error("Error se dogodio prilikom odgovora od OpenAI:", error);
+      console.error("An error occurred while receiving a response from OpenAI.", error);
     } finally {
       setIsTyping(false);
     }
@@ -96,7 +96,7 @@ function Chat() {
           <MessageList
             scrollBehavior="smooth"
             typingIndicator={
-              isTyping ? <TypingIndicator content="Asistent kuca ..." /> : null
+              isTyping ? <TypingIndicator content="The assistant is typing ..." /> : null
             }
           >
             {messages.map((message, i) => (
@@ -107,7 +107,7 @@ function Chat() {
               />
             ))}
           </MessageList>
-          <MessageInput placeholder="Unesite poruku ovde" onSend={handleSend} />
+          <MessageInput placeholder="Enter your message here" onSend={handleSend} />
         </ChatContainer>
       </MainContainer>
     </div>

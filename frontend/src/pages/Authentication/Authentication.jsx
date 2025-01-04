@@ -61,24 +61,24 @@ export default function Authentication() {
 
     // Email validation
     if (!formData.email) {
-      errors.email = "Email je obavezan";
+      errors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       errors.email = "Invalid email format";
     }
 
     // Password validation using regex for length and character conditions
     if (!formData.password) {
-      errors.password = "Lozinka je obavezna";
+      errors.password = "Password is required";
     } else {
       const passwordErrors = [];
       if (formData.password.length < 6)
-        passwordErrors.push("Lozinka mora imati najmanje 6 znakova");
+        passwordErrors.push("Password must be at least 6 characters long");
       if (!/[A-Z]/.test(formData.password))
-        passwordErrors.push("Lozinka mora imati najmanje jedno veliko slovo");
+        passwordErrors.push("Password must contain at least one uppercase letter");
       if (!/[a-z]/.test(formData.password))
-        passwordErrors.push("Lozinka mora imati najmanje jedno malo slovo");
+        passwordErrors.push("Password must contain at least one lowercase letter");
       if (!/[0-9]/.test(formData.password))
-        passwordErrors.push("Lozinka mora imati najmanje jedan broj");
+        passwordErrors.push("Password must contain at least one number");
 
       if (passwordErrors.length) {
         errors.password = passwordErrors.join(", ");
@@ -148,7 +148,7 @@ export default function Authentication() {
       const responseData = await response.json();
 
       if (!response.ok) {
-        setError(responseData.message || "Došlo je do greške");
+        setError(responseData.message || "An error has occurred");
         setLoader(false);
         setIsModalOpen(true);
         return;
@@ -159,7 +159,7 @@ export default function Authentication() {
       navigate("/");
     } catch (error) {
       console.error(error);
-      setError("Došlo je do greške. Pokušajte ponovo.");
+      setError("An error has occurred. Try again.");
       setIsModalOpen(true);
       return;
     } finally {
@@ -188,7 +188,7 @@ export default function Authentication() {
 
   return (
     <>
-      <Header title={mode === "login" ? "Prijava" : "Registracija"} />
+      <Header title={mode === "login" ? "Login" : "Registration"} />
       <div className="form-container">
         <form className="form" onSubmit={handleSubmit}>
           <div className="form-control">
@@ -207,7 +207,7 @@ export default function Authentication() {
           </div>
 
           <div className="form-control">
-            <label htmlFor="password">Lozinka</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
@@ -224,7 +224,7 @@ export default function Authentication() {
           {mode === "register" && (
             <>
               <div className="form-control">
-                <label htmlFor="confirm-password">Ponovi lozinku</label>
+                <label htmlFor="confirm-password">Confirm password</label>
                 <input
                   type="password"
                   name="confirmPassword"
@@ -239,7 +239,7 @@ export default function Authentication() {
               </div>
 
               <div className="form-control">
-                <label htmlFor="name">Ime</label>
+                <label htmlFor="name">First Name</label>
                 <input
                   type="text"
                   name="name"
@@ -254,7 +254,7 @@ export default function Authentication() {
               </div>
 
               <div className="form-control">
-                <label htmlFor="surname">Prezime</label>
+                <label htmlFor="surname">Last Name</label>
                 <input
                   type="text"
                   name="surname"
@@ -269,7 +269,7 @@ export default function Authentication() {
               </div>
 
               <div className="form-control">
-                <label htmlFor="phone">Telefon</label>
+                <label htmlFor="phone">Phone</label>
                 <input
                   type="tel"
                   name="phone"
@@ -284,7 +284,7 @@ export default function Authentication() {
               </div>
 
               <div className="form-control">
-                <label htmlFor="address">Adresa</label>
+                <label htmlFor="address">Address</label>
                 <input
                   type="text"
                   name="address"
@@ -303,7 +303,7 @@ export default function Authentication() {
             {!error && loader && <Loader />}
             {!loader && (
               <button type="submit">
-                {mode === "login" ? "Prijava" : "Registracija"}
+                {mode === "login" ? "Login" : "Registration"}
               </button>
             )}
           </div>
@@ -314,8 +314,8 @@ export default function Authentication() {
             onClose={() => setIsModalOpen(false)}
             errorMessage={error}
           >
-            <h1>Greška</h1>
-            <p>Proverite podatke još jednom</p>
+            <h1>Error</h1>
+            <p>Please check the information again</p>
           </Modal>
         )}
       </div>

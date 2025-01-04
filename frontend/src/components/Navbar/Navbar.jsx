@@ -35,27 +35,27 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo" onClick={() => navigate("/")}>
-        SmartRazred
+      SmartClassroom
       </div>
       <div className={`navbar-links ${isOpen ? "open" : ""}`}>
         {isLoggedIn && (
           <>
-            {role !== "Admin" && <a href="/notifications">Obaveštenja</a>}
-            {(role !== "Roditelj" && role !== "Admin") && <a href="/materials">Materijali</a>}
-            {role !== "Admin" && <a href="/meetings">Sastanak</a>}
-            {role === "Razredni" && <a href="/chat">Asistent u radu</a>}
+            {role !== "Admin" && <a href="/notifications">Notifications</a>}
+            {(role !== "Roditelj" && role !== "Admin") && <a href="/materials">Materials</a>}
+            {role !== "Admin" && <a href="/meetings">Meeting</a>}
+            {role === "Razredni" && <a href="/chat">Assistant in work</a>}
             {role === "Dete" && (
               <div className="dropdown">
                 <select onChange={handleDropdownChange} defaultValue="">
-                  <option value="asistent" selected >Asistent u učenju</option>
-                  <option value="image">Objasni sliku</option>
+                  <option value="asistent" selected >Assistant in learning</option>
+                  <option value="image">Explain the picture</option>
                 </select>
               </div>
             )}
-            {role !== "Admin" && <a href="/lostandfound">Izgubljeno nađeno</a>}
-            {role === "Admin" && <a href="/admin/createuser">Dodaj korisnika</a>}
-            {role === "Roditelj" && <a>Roditeljski Kutak</a>}
-            {role !== "" && <a href="/profile">Profil</a>}
+            {role !== "Admin" && <a href="/lostandfound">Lost and Found</a>}
+            {role === "Admin" && <a href="/admin/createuser">Add user</a>}
+            {role === "Roditelj" && <a>Parent's Corner</a>}
+            {role !== "" && <a href="/profile">Profile</a>}
             <a onClick={handleLogout} href="#">
               Logout
             </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
         )}
         {!isLoggedIn && (
           <>
-            <a href="/auth?mode=login">Prijavi se</a>
+            <a href="/auth?mode=login">Log in </a>
           </>
         )}
       </div>

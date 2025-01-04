@@ -10,8 +10,8 @@ function EtiquettePuzzle() {
   const [isGameOver, setIsGameOver] = useState(false);
 
   const questions = [
-    { question: "Koje ponašanje je najbolje u društvu?", options: ["Poslušaj starije", "Budi nezainteresovan", "Smej se kada drugi padaju"], correctAnswer: "Poslušaj starije" },
-    { question: "Šta bi trebalo da uradiš ako vidiš da neko deli lične informacije na internetu?", options: ["Obavesti odrasle", "Ignoriši", "Deluj isto kao i oni"], correctAnswer: "Obavesti odrasle" },
+    { question: "What behavior is best in society?", options: ["Listen to your elders", "Be uninterested", "Laugh when others fall"], correctAnswer: "Listen to your elders" },
+    { question: "What should you do if you see someone sharing personal information online?", options: ["Inform the adults", "Ignore", "Act the same as they do"], correctAnswer: "Inform the adults" },
     // ... ostatak pitanja ...
   ];
 
@@ -38,16 +38,16 @@ function EtiquettePuzzle() {
 
   return (
     <>
-      <Header title="Slagalica pravila ponašanja" />
+      <Header title="Behavioral Rules Puzzle" />
       <div className="game-container-safety">
         {isGameOver ? (
           <div className="game-over">
             <Puzzle className="game-over-icon" />
             <h3>
-              {correctAnswers === questions.length ? "Pobednik!" : "Pokušaj ponovo!"}
+              {correctAnswers === questions.length ? "Winner!" : "Try again!"}
             </h3>
-            <p>Broj tačnih odgovora: {correctAnswers} od {questions.length}</p>
-            <button onClick={restartGame}>Igraj opet</button>
+            <p>Number of correct answers: {correctAnswers} od {questions.length}</p>
+            <button onClick={restartGame}>Play again</button>
           </div>
         ) : (
           <div>

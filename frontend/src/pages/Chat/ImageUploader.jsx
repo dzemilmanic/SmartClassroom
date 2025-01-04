@@ -36,12 +36,12 @@ const ImageUploader = () => {
         messages: [
           {
             role: "system",
-            content: "Ti si korisni asistent koji treba da opisuje slike.",
+            content: "You are a helpful assistant who needs to describe images.",
           },
           {
             role: "user",
             content: [
-              { type: "text", text: "Koja je ovo slika ?" },
+              { type: "text", text: "What is this picture" },
               {
                 type: "image_url",
                 image_url: {
@@ -57,8 +57,8 @@ const ImageUploader = () => {
 
       setResponse(result.choices[0].message.content);
     } catch (error) {
-      console.error("Error prilikom potvrdjivanja slike:", error);
-      setResponse("Error se desio prilikom odgovora od OpenAI.");
+      console.error("Error while verifying the image:", error);
+      setResponse("An error occurred while receiving a response from OpenAI.");
     } finally {
       setLoading(false);
     }
@@ -86,12 +86,12 @@ const ImageUploader = () => {
           className="image-uploader-input"
         />
         {loading ? <Loader /> : <button style={{marginBottom:"10%"}} type="submit" className="image-uploader-button" disabled={loading}>
-          {loading ? "Sacekajte..." : "Potrvrdi"}
+          {loading ? "Wait..." : "Confirm"}
         </button>}
       </form>
       {response && (
         <div className="image-uploader-response-container">
-          <h2 className="image-uploader-response-heading">Odgovor:</h2>
+          <h2 className="image-uploader-response-heading">Answer:</h2>
           <p className="image-uploader-response-text">{response}</p>
         </div>
       )}

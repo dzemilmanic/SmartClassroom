@@ -11,28 +11,28 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
-          <h3>O nama</h3>
-          <p>SmartRazred je digitalna platforma koja povezuje roditelje, učenike i nastavnike kako bi unapredila obrazovni proces. Naša platforma omogućava jednostavnu razmenu materijala, organizovanje sastanaka i pružanje podrške učenicima kroz alate kao što su asistenti za učenje. S ciljem poboljšanja komunikacije i organizacije, SmartRazred pruža sveobuhvatno rešenje za efikasno praćenje obrazovnog napretka i podršku svakom članu obrazovnog sistema.</p>
+          <h3>About Us</h3>
+          <p>SmartClassroom is a digital platform that connects parents, students, and teachers to enhance the educational process. Our platform enables easy sharing of materials, organizing meetings, and providing student support through tools such as learning assistants. With the goal of improving communication and organization, SmartClassroom offers a comprehensive solution for effectively tracking educational progress and supporting every member of the educational system.</p>
         </div>
         <div className="footer-section">
           
         {role && (
   <>
-    <h3>Brzi linkovi</h3>
+    <h3>Quick Links</h3>
     <ul>
       {role !== "Admin" && (
         <li>
-          <a onClick={() => navigate("/notifications")}>Obavestenja</a>
+          <a onClick={() => navigate("/notifications")}>Notifications</a>
         </li>
       )}
       {(role === "Razredni" || role === "Dete") && (
         <li>
-          <a onClick={() => navigate("/materials")}>Materijali</a>
+          <a onClick={() => navigate("/materials")}>Materials</a>
         </li>
       )}
       {role !== "Admin" && (
         <li>
-          <a onClick={() => navigate("/meetings")}>Sastanak</a>
+          <a onClick={() => navigate("/meetings")}>Meeting</a>
         </li>
       )}
     </ul>
@@ -41,13 +41,13 @@ const Footer = () => {
 
         </div>
         <div className="footer-section">
-          <h3>Kontakt informacije</h3>
-          <p>Email: info@smartRazred.com</p>
-          <p>Telefon: 020 381 381</p>
+          <h3>Contact Information</h3>
+          <p>Email: info@smartclassroom.com</p>
+          <p>Phone: 020 381 381</p>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2024 SmartRazred. Sva prava zadržana.</p>
+        <p>&copy; 2024 SmartClassroom. All rights reserved.</p>
       </div>
     </footer>
   );

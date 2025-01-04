@@ -11,7 +11,7 @@ const Meeting = () => {
 
   async function handleDelete(id) {
     if (role !== "Razredni") {
-      alert("Nemate pravo da brišete ovu stavku.");
+      alert("You do not have permission to delete this item.");
       return;
     }
 
@@ -21,10 +21,10 @@ const Meeting = () => {
         headers: { "Content-Type": "application/json" },
       });
       if (!response.ok) {
-        console.log("Greška: Nije uspelo brisanje");
+        console.log("Error: Delete failed");
       }
     } catch (error) {
-      console.log("Greška: " + error);
+      console.log("Error: " + error);
     }
     window.location.reload();
   }
@@ -44,7 +44,7 @@ const Meeting = () => {
         const data = await response.json();
         setMeetings(data);
       } catch (error) {
-        console.error("Greška prilikom dohvaćanja obaveštenja:", error);
+        console.error("Error while fetching the notification:", error);
       }
     }
     fetchAllMeetings();
@@ -52,9 +52,9 @@ const Meeting = () => {
 
   return (
     <>
-      <Header title="Sastanak" />
+      <Header title="Meeting" />
       <div className="material">
-        {role === "Razredni" &&<button className="add-material" onClick={handleAdd}>Kreiraj sastanak</button>}
+        {role === "Razredni" &&<button className="add-material" onClick={handleAdd}>Create meeting</button>}
         <div className="notification-container">
           {meetings.map((meeting, index) => (
             <div
@@ -66,11 +66,11 @@ const Meeting = () => {
               <h1 className="notification-title">{meeting.title}</h1>
               <p className="notification-description">
                 <a href={meeting.link} target="_blank" rel="noopener noreferrer">
-                  Klik za sastanak
+                  Click for meeting
                 </a>
               </p>
               <p className="notification-author">
-                Starešina: <strong>{meeting.createdBy}</strong>
+                Teacher: <strong>{meeting.createdBy}</strong>
               </p>
               <p className="notification-date">
                 {new Date(meeting.date).toLocaleDateString("sr-RS", {
@@ -84,7 +84,7 @@ const Meeting = () => {
                   className="delete-button"
                   onClick={() => handleDelete(meeting.id)}
                 >
-                  Obriši
+                  Delete
                 </button>
               )}
             </div>

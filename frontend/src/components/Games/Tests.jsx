@@ -3,32 +3,32 @@ import "./Tests.css";
 
 const mathQuestions = [
   {
-    question: "Koliko je 5 + 3 * 2?",
+    question: "What is 5 + 3 * 2?",
     answer: "11",
     incorrectAnswers: ["13", "14", "15"],
   },
   {
-    question: "Koliko je 12 x 3 + 4?",
+    question: "What is 12 x 3 + 4?",
     answer: "40",
     incorrectAnswers: ["36", "42", "45"],
   },
   {
-    question: "Koliko je 15 - 8 / 4?",
+    question: "What is 15 - 8 / 4?",
     answer: "13",
     incorrectAnswers: ["12", "10", "14"],
   },
   {
-    question: "Koliko je 100 / 5?",
+    question: "What is 100 / 5?",
     answer: "20",
     incorrectAnswers: ["15", "25", "30"],
   },
   {
-    question: "Koliko je 9 * 8?",
+    question: "What is 9 * 8?",
     answer: "72",
     incorrectAnswers: ["68", "74", "80"],
   },
   {
-    question: "Koliko je 5^3?",
+    question: "What is 5^3?",
     answer: "125",
     incorrectAnswers: ["100", "150", "200"],
   },
@@ -36,115 +36,115 @@ const mathQuestions = [
 
 const englishQuestions = [
   {
-    question: "Kako se kaže 'zdravo' na engleskom?",
-    answer: "Hello",
-    incorrectAnswers: ["Hi", "Goodbye", "Hey"],
+    question: "How do you say 'hello' in Bosnian??",
+    answer: "Zdravo",
+    incorrectAnswers: ["Ćao", "Doviđenja", "Pozdrav"],
   },
   {
-    question: "Šta je suprotno od 'hot'?",
+    question: "What is the opposite of 'hot'??",
     answer: "Cold",
     incorrectAnswers: ["Warm", "Cool", "Freezing"],
   },
   {
-    question: "Kako se kaže 'dobro jutro' na engleskom?",
-    answer: "Good morning",
-    incorrectAnswers: ["Good evening", "Good night", "Hello"],
+    question: "How do you say 'Good morning' in Bosnian?",
+    answer: "Dobro jutro",
+    incorrectAnswers: ["Dobro veče", "Laku noć", "Zdravo"],
   },
   {
-    question: "Šta znači 'goodbye'?",
-    answer: "Zbogom",
+    question: "What does 'Doviđenja' mean?",
+    answer: "Goodbye",
     incorrectAnswers: ["Hello", "Good morning", "Bye"],
   },
   {
-    question: "Kako se kaže 'hvala' na engleskom?",
-    answer: "Thank you",
-    incorrectAnswers: ["Thanks", "Please", "Sorry"],
+    question: "How do you say 'Thank you' in Bosnian?",
+    answer: "Hvala",
+    incorrectAnswers: ["Izvini", "Molim te", "Pozdrav"],
   },
 ];
 
 const logicQuestions = [
   {
-    question:
-      "Ako su sve mačke životinje, a neke životinje psi, jesu li sve mačke psi?",
-    answer: "Ne",
-    incorrectAnswers: ["Da", "Možda", "Nema odgovora"],
+    "question": "If all cats are animals, and some animals are dogs, are all cats dogs?",
+    "answer": "No",
+    "incorrectAnswers": ["Yes", "Maybe", "No answer"]
   },
   {
-    question: "Šta slijedi u nizu: 2, 7, 12, 17, __?",
-    answer: "22",
-    incorrectAnswers: ["18", "19", "23"],
+    "question": "What comes next in the sequence: 2, 7, 12, 17, __?",
+    "answer": "22",
+    "incorrectAnswers": ["18", "19", "23"]
   },
   {
-    question: "Ako imate 3 jabuke i odnesete 2, koliko ih imate?",
-    answer: "2",
-    incorrectAnswers: ["1", "3", "4"],
+    "question": "If you have 3 apples and take away 2, how many do you have?",
+    "answer": "2",
+    "incorrectAnswers": ["1", "3", "4"]
   },
   {
-    question: "Ako je 5 > 3 i 3 > 2, da li je 5 > 2?",
-    answer: "Da",
-    incorrectAnswers: ["Ne", "Možda", "Nema odgovora"],
+    "question": "If 5 > 3 and 3 > 2, is 5 > 2?",
+    "answer": "Yes",
+    "incorrectAnswers": ["No", "Maybe", "No answer"]
   },
   {
-    question: "Koji broj sledi u nizu: 3, 6, 9, 12, __?",
-    answer: "15",
-    incorrectAnswers: ["13", "14", "16"],
-  },
+    "question": "Which number follows in the sequence: 3, 6, 9, 12, __?",
+    "answer": "15",
+    "incorrectAnswers": ["13", "14", "16"]
+  }
 ];
+
 const historyQuestions = [
-    {
-      question: "Koji je bio prvi svetski rat?",
-      answer: "Prvi svetski rat",
-      incorrectAnswers: ["Drugi svetski rat", "Hladni rat", "Krimski rat"],
-    },
-    {
-      question: "Ko je bio prvi car Rima?",
-      answer: "August",
-      incorrectAnswers: ["Cezar", "Neron", "Julije Cezar"],
-    },
-    {
-      question: "Kada je počeo Drugi svetski rat?",
-      answer: "1939",
-      incorrectAnswers: ["1941", "1945", "1929"],
-    },
-    {
-      question: "Ko je bio lider Sovjetskog Saveza tokom Drugog svetskog rata?",
-      answer: "Staljin",
-      incorrectAnswers: ["Lenjin", "Hruščov", "Breznjev"],
-    },
-    {
-      question: "Koji je bio datum potpisivanja Versailleskog ugovora?",
-      answer: "1919",
-      incorrectAnswers: ["1918", "1923", "1939"],
-    },
-  ];
-  
-  const geographyQuestions = [
-    {
-      question: "Koji je najveći okean na svetu?",
-      answer: "Pacifik",
-      incorrectAnswers: ["Atlantik", "Indijski", "Arktički"],
-    },
-    {
-      question: "Koja država ima najveći broj stanovnika?",
-      answer: "Kina",
-      incorrectAnswers: ["Indija", "SAD", "Rusija"],
-    },
-    {
-      question: "Koji je glavni grad Francuske?",
-      answer: "Pariz",
-      incorrectAnswers: ["Marsej", "Lion", "Bordo"],
-    },
-    {
-      question: "Koji kontinent je najmlađi?",
-      answer: "Antarktik",
-      incorrectAnswers: ["Afrika", "Azija", "Evropa"],
-    },
-    {
-      question: "Koja je najviša planina na svetu?",
-      answer: "Mount Everest",
-      incorrectAnswers: ["K2", "Kangchenjunga", "Makalu"],
-    },
-  ];
+  {
+    "question": "What was the First World War?",
+    "answer": "World War I",
+    "incorrectAnswers": ["World War II", "Cold War", "Crimean War"]
+  },
+  {
+    "question": "Who was the first emperor of Rome?",
+    "answer": "Augustus",
+    "incorrectAnswers": ["Caesar", "Nero", "Julius Caesar"]
+  },
+  {
+    "question": "When did World War II begin?",
+    "answer": "1939",
+    "incorrectAnswers": ["1941", "1945", "1929"]
+  },
+  {
+    "question": "Who was the leader of the Soviet Union during World War II?",
+    "answer": "Stalin",
+    "incorrectAnswers": ["Lenin", "Khrushchev", "Brezhnev"]
+  },
+  {
+    "question": "What was the date of the signing of the Treaty of Versailles?",
+    "answer": "1919",
+    "incorrectAnswers": ["1918", "1923", "1939"]
+  }
+];
+
+const geographyQuestions = [
+  {
+    "question": "What is the largest ocean in the world?",
+    "answer": "Pacific",
+    "incorrectAnswers": ["Atlantic", "Indian", "Arctic"]
+  },
+  {
+    "question": "Which country has the largest population?",
+    "answer": "China",
+    "incorrectAnswers": ["India", "USA", "Russia"]
+  },
+  {
+    "question": "What is the capital city of France?",
+    "answer": "Paris",
+    "incorrectAnswers": ["Marseille", "Lyon", "Bordeaux"]
+  },
+  {
+    "question": "Which continent is the youngest?",
+    "answer": "Antarctica",
+    "incorrectAnswers": ["Africa", "Asia", "Europe"]
+  },
+  {
+    "question": "What is the highest mountain in the world?",
+    "answer": "Mount Everest",
+    "incorrectAnswers": ["K2", "Kangchenjunga", "Makalu"]
+  }
+];
   
 
 const Tests = () => {
@@ -237,9 +237,9 @@ const Tests = () => {
   // Function to display custom message based on score
   const displayMessage = () => {
     if (score === 5) {
-      return <p>Svaka čast! Postigao/la si 5/5!</p>;
+      return <p>Well done! You scored 5/5!</p>;
     } else if (score === 0) {
-      return <p>Morate više vežbati!</p>;
+      return <p>You need to practice more!</p>;
     }
     return null;
   };
@@ -248,20 +248,20 @@ const Tests = () => {
     <div className="test-container">
       {!selectedTest ? (
         <div>
-          <h2>Odaberite oblast za testiranje</h2>
+          <h2>Choose a subject for testing</h2>
           <button onClick={() => handleTestSelection("mathematics")}>
-            Matematika
+          Mathematics
           </button>
           <button onClick={() => handleTestSelection("english")}>
-            Engleski
+          English
           </button>
-          <button onClick={() => handleTestSelection("logic")}>Logika</button>
-          <button onClick={() => handleTestSelection("history")}>Istorija</button> {/* Dodato dugme za istoriju */}
-          <button onClick={() => handleTestSelection("geography")}>Geografija</button> {/* Dodato dugme za geografiju */}
+          <button onClick={() => handleTestSelection("logic")}>Logic</button>
+          <button onClick={() => handleTestSelection("history")}>History</button> {/* Dodato dugme za istoriju */}
+          <button onClick={() => handleTestSelection("geography")}>Geography</button> {/* Dodato dugme za geografiju */}
         </div>
       ) : !isGameOver ? (
         <div>
-          <div className="timer">Preostalo vreme: {timer}s</div>
+          <div className="timer">Remaining time: {timer}s</div>
           <h3>{currentQuestion?.question}</h3>
           <div className="answers">
             {answerOptions.map((answer, index) => (
@@ -277,12 +277,12 @@ const Tests = () => {
         </div>
       ) : (
         <div>
-          <h3>Kraj igre</h3>
-          <p>Tvoj rezultat: {score}</p>
-          <p>Netačnih odgovora: {incorrect}</p>
+          <h3>End of the game</h3>
+          <p>Your result: {score}</p>
+          <p>Incorrect answers: {incorrect}</p>
           {displayMessage()}
           <button onClick={() => setSelectedTest(null)}>
-            Vrati se na sekciju sa testovima
+          Return to the test section.
           </button>
         </div>
       )}

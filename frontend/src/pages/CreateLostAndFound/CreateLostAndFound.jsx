@@ -30,7 +30,7 @@ const CreateLostAndFound = () =>{
       try{
         const response = await fetch(`${API_URL}/users/${userId}`);
         if(!response.ok){
-          console.log("Korisnik nije pronadjen")
+          console.log("User not found.")
           return;
         }
         const data = await response.json();
@@ -67,17 +67,17 @@ const CreateLostAndFound = () =>{
         const errorData = await response.json();
       }
     } catch (error) {
-      console.error("Greška:", error);
+      console.error("Error:", error);
     }
   }
 
 
     return <>
     <div className="form-container">
-      <h3 style={{textAlign:"center"}}>Postavljanje izgubljenih/nadjenih stvari</h3>
+      <h3 style={{textAlign:"center"}}>Posting lost and found items</h3>
             <form className="form">
             <div className="form-control">
-            <label htmlFor="title">Naslov</label>
+            <label htmlFor="title">Title</label>
             <input
               type="text"
               name="title"
@@ -85,23 +85,23 @@ const CreateLostAndFound = () =>{
               required
               value={title}
               onChange={handleTitleChange}
-              placeholder="Predmet koji ste nasli/izgubili"
+              placeholder="The item you found/lost"
             />
           </div>
           <div className="form-control">
-            <label htmlFor="description">Opis</label>
+            <label htmlFor="description">Description</label>
             <textarea  id="description"
                 name="description"
                 rows="5" 
                 cols="40" 
-                placeholder="Unesite vašu poruku ovde..."
+                placeholder="Enter your message here..."
                 value={description}
                 onChange={handleDescriptionChange}
                 ></textarea>
           </div>
           <div className="button-container">
           {(role === "Razredni" || role === "Dete") &&<button type="button"  onClick={handleSubmit}>
-            Kreiraj objava
+          Create a post
             </button>}
           </div>
         </form>

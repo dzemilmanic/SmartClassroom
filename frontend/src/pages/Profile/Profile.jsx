@@ -52,8 +52,8 @@ function Profile() {
       </div>
     );
   }
-  if (error) return <div className="error">Greška: {error}</div>;
-  if (!user) return <div className="error">Korisnik nije pronađen</div>;
+  if (error) return <div className="error">Error: {error}</div>;
+  if (!user) return <div className="error">User not found</div>;
 
   return (
     <>
@@ -61,11 +61,11 @@ function Profile() {
       <div className="profile-container">
         <div className="profile-info">
           <div className="info-group">
-            <label style={{color:"white"}}>Ime:</label>
+            <label style={{color:"white"}}>First Name:</label>
             <span style={{color:"white"}}>{user.name}</span>
           </div>
           <div className="info-group">
-            <label style={{color:"white"}}>Prezime:</label>
+            <label style={{color:"white"}}>Last Name:</label>
             <span style={{color:"white"}}>{user.surname}</span>
           </div>
           <div className="info-group">
@@ -73,7 +73,7 @@ function Profile() {
             <span style={{color:"white"}}>{user.email}</span>
           </div>
           <div className="info-group">
-            <label style={{color:"white"}}>Telefon:</label>
+            <label style={{color:"white"}}>Phone:</label>
             <span style={{color:"white"}}>{user.phone}</span>
           </div>
         </div>
@@ -82,13 +82,13 @@ function Profile() {
             className="edit-button"
             onClick={() => navigate(`/profile/${userId}/edit`)}
           >
-            Izmeni Profil
+            Change Profile info
           </button>
           <button
             className="change-password-button"
             onClick={() => navigate("/profile/change-password")}
           >
-            Promeni Šifru
+            Change Password
           </button>
         </div>
       </div>

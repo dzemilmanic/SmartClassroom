@@ -27,23 +27,23 @@ function ChangePassword() {
   const validate = () => {
     const errors = {};
     if (!passwords.oldPassword) {
-      errors.oldPassword = "Stara lozinka je obavezna";
+      errors.oldPassword = "Old password is required";
     } else if (!passwordRegex.test(passwords.oldPassword)) {
       errors.oldPassword =
-        "Lozinka mora imati najmanje 6 znakova, uključujući veliko i malo slovo i broj";
+        "Password must be at least 6 characters long and include an uppercase letter, a lowercase letter, and a number.";
     }
     if (!passwords.newPassword) {
-      errors.newPassword = "Nova lozinka je obavezna";
+      errors.newPassword = "New password is required";
     } else if (!passwordRegex.test(passwords.newPassword)) {
       errors.newPassword =
-        "Lozinka mora imati najmanje 6 znakova, uključujući veliko i malo slovo i broj";
+        "The password must be at least 6 characters long and include an uppercase letter, a lowercase letter, and a number.";
     } else if (passwords.oldPassword === passwords.newPassword) {
-      errors.newPassword = "Nova lozinka ne sme biti ista kao trenutna lozinka";
+      errors.newPassword = "The new password must not be the same as the current password.";
     }
     if (!passwords.confirmPassword) {
-      errors.confirmPassword = "Potvrda lozinke je obavezna";
+      errors.confirmPassword = "Password confirmation is required";
     } else if (passwords.confirmPassword !== passwords.newPassword) {
-      errors.confirmPassword = "Lozinke se ne podudaraju";
+      errors.confirmPassword = "Passwords do not match";
     }
 
     setFormErrors(errors);
@@ -73,7 +73,7 @@ function ChangePassword() {
 
       if (!response.ok) {
         const error = await response.json();
-        setError(error.message || "Došlo je do greške");
+        setError(error.message || "An error has occurred");
         setIsModalOpen(true);
         return;
       }
@@ -81,7 +81,7 @@ function ChangePassword() {
       navigate("/profile");
     } catch (err) {
       console.error(err);
-      setError("Greška u mreži. Pokušajte ponovo kasnije.");
+      setError("Network error. Please try again later.");
       setIsModalOpen(true);
     }
   };
@@ -93,7 +93,7 @@ function ChangePassword() {
         <div className="password-form-container">
           <form onSubmit={handleSubmit} className="password-form">
             <div className="form-group">
-              <label style={{color:"white"}}>Trenutna lozinka</label>
+              <label style={{color:"white"}}>Current password</label>
               <input
                 type="password"
                 value={passwords.oldPassword}
@@ -108,7 +108,7 @@ function ChangePassword() {
             </div>
 
             <div className="form-group">
-              <label style={{color:"white"}}>Nova lozinka</label>
+              <label style={{color:"white"}}>New password</label>
               <input
                 type="password"
                 value={passwords.newPassword}
@@ -123,7 +123,7 @@ function ChangePassword() {
             </div>
 
             <div className="form-group">
-              <label style={{color:"white"}}>Potvrdite novu lozinku</label>
+              <label style={{color:"white"}}>Confirm new password</label>
               <input
                 type="password"
                 value={passwords.confirmPassword}
@@ -143,7 +143,7 @@ function ChangePassword() {
             </div>
 
             <button type="submit" className="submit-btn">
-              Promenite lozinku
+            Change password
             </button>
           </form>
         </div>
@@ -153,8 +153,8 @@ function ChangePassword() {
         onClose={() => setIsModalOpen(false)}
         errorMessage={error}
       >
-        <h2>Greška</h2>
-        <p>Unesite ispravnu lozinku</p>
+        <h2>Error</h2>
+        <p>Enter a valid password</p>
       </Modal>
     </>
   );

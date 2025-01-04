@@ -8,58 +8,58 @@ function PhishingGame() {
 
   const questions = [
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Od vas se traži da unesete podatke o kartici kako biste dobili nagradu.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Da",
+      question: "Is this email a phishing attempt?",
+      message: "You are asked to enter your card details to claim a reward.",
+      answers: ["Yes", "No"],
+      correctAnswer: "Yes",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Ovo je obaveštenje iz vaše banke o neovlašćenom pokušaju prijavljivanja.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Ne",
+      question: "Is this email a phishing attempt?",
+      message: "This is a notification from your bank about an unauthorized login attempt.",
+      answers: ["Yes", "No"],
+      correctAnswer: "No",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Dobijate email od 'Amazon' koji vas obaveštava da morate resetovati lozinku zbog sumnjive aktivnosti na vašem nalogu.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Da",
+      question: "Is this email a phishing attempt?",
+      message: "You received an email from 'Amazon' notifying you that you must reset your password due to suspicious activity on your account.",
+      answers: ["Yes", "No"],
+      correctAnswer: "Yes",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Poruka tvrdi da je stigao paket za vas, ali traži da kliknete link kako biste uneli podatke za dostavu.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Da",
+      question: "Is this email a phishing attempt?",
+      message: "The message claims that a package has arrived for you, but asks you to click a link to enter delivery details.",
+      answers: ["Yes", "No"],
+      correctAnswer: "Yes",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Ovo je obaveštenje od vaše banke koje vas obaveštava da je vaš račun uspešno zatvoren zbog neaktivnosti, uz instrukcije kako da se ponovo prijavite.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Ne",
+      question: "Is this email a phishing attempt?",
+      message: "This is a notification from your bank informing you that your account has been successfully closed due to inactivity, with instructions on how to log in again.",
+      answers: ["Yes", "No"],
+      correctAnswer: "No",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Poruka tvrdi da ste dobili besplatan vaučer za putovanje, ali traži da unesete podatke o kartici.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Da",
+      question: "Is this email a phishing attempt?",
+      message: "The message claims you’ve received a free travel voucher but asks you to enter your card details.",
+      answers: ["Yes", "No"],
+      correctAnswer: "Yes",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Obaveštenje od vaše internet provajder kompanije kaže da će vaš račun biti suspendovan ako ne platite odmah, ali uključuje sumnjiv link za uplatu.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Da",
+      question: "Is this email a phishing attempt?",
+      message: "A notification from your internet service provider says your account will be suspended if you don’t pay immediately, but includes a suspicious payment link.",
+      answers: ["Yes", "No"],
+      correctAnswer: "Yes",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Email vas obaveštava da ste dobili nagradu u lutriji, ali traži da unesete lične podatke kako biste je preuzeli.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Da",
+      question: "Is this email a phishing attempt?",
+      message: "The email informs you that you’ve won a lottery prize but asks you to enter personal details to claim it.",
+      answers: ["Yes", "No"],
+      correctAnswer: "Yes",
     },
     {
-      question: "Da li je ova email poruka phishing?",
-      message: "Email od 'Netflix-a' vas obaveštava da je vaša pretplata blokirana i traži da kliknete na link da biste je ponovo aktivirali.",
-      answers: ["Da", "Ne"],
-      correctAnswer: "Da",
+      question: "Is this email a phishing attempt?",
+      message: "An email from 'Netflix' informs you that your subscription has been blocked and asks you to click a link to reactivate it.",
+      answers: ["Yes", "No"],
+      correctAnswer: "Yes",
     },
   ];
 
@@ -77,12 +77,12 @@ function PhishingGame() {
 
   return (
     <>
-    <Header title="Prepoznavanje phishing poruka"/>
+    <Header title="Phishing Message Recognition"/>
     <div className="phishing-game-container">
       {isGameOver ? (
         <div className="phishing-game-over">
-          <h3 className="phishing-game-over-title">Kraj igre!</h3>
-          <p className="phishing-game-over-score">Vaš rezultat je: {score} od {questions.length}</p>
+          <h3 className="phishing-game-over-title">Game Over!</h3>
+          <p className="phishing-game-over-score">Your result is: {score} of {questions.length}</p>
         </div>
       ) : (
         <div className="phishing-game-question-section">

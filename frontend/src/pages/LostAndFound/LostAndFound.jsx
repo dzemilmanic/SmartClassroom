@@ -12,7 +12,7 @@ const LostAndFound = () => {
 
   async function handleDelete(id) {
     if (role !== "Razredni" && role !== "Dete") {
-      alert("Nemate pravo da brišete ovu stavku.");
+      alert("You do not have the right to delete this item.");
       return;
     }
 
@@ -47,7 +47,7 @@ const LostAndFound = () => {
         const data = await response.json();
         setLostAndFounds(data);
       } catch (error) {
-        console.error("Greška prilikom dohvaćanja materijala:", error);
+        console.error("Error while fetching the material:", error);
       }
     }
     fetchAllLostAndFounds();
@@ -55,10 +55,10 @@ const LostAndFound = () => {
 
   return (
     <>
-      <Header title="Izgubljene stvari" />
+      <Header title="Lost items" />
       <div className="lost-and-found">
         <button className="add-material" onClick={handleAdd}>
-          Dodaj izgubljeno/nađeno
+        Add lost/found
         </button>
         <div className="lost-and-found-container">
           {lostAndFounds.map((lostAndFound, index) => (
@@ -70,8 +70,8 @@ const LostAndFound = () => {
             >
               <h1>{lostAndFound.title}</h1>
               <p>{lostAndFound.description}</p>
-              <p style={{ fontWeight: "520" }}>Škola: {lostAndFound.school}</p>
-              <p className="author">Autor: {lostAndFound.createdBy}</p>
+              <p style={{ fontWeight: "520" }}>School: {lostAndFound.school}</p>
+              <p className="author">Author: {lostAndFound.createdBy}</p>
               <p className="date">
                 {new Date(lostAndFound.date).toLocaleDateString("sr-RS", {
                   year: "numeric",
@@ -85,7 +85,7 @@ const LostAndFound = () => {
                   className="delete-button"
                   onClick={() => handleDelete(lostAndFound.id)}
                 >
-                  Obriši
+                  Delete
                 </button>
               )}
             </div>

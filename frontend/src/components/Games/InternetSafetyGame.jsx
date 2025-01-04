@@ -8,81 +8,81 @@ function InternetSafetyGame() {
 
   const questions = [
     {
-      question: "Šta bi trebalo da uradiš ako dobiješ nepoznatu email poruku?",
+      question: "What should you do if you receive an unknown email message?",
       answers: [
-        "Otvoriti je i kliknuti na linkove",
-        "Obrisati je i obavestiti odrasle osobe",
-        "Odgovoriti na nju sa ličnim podacima",
+        "Open it and click on the links",
+        "Delete it and inform adults",
+        "Reply with personal information",
       ],
-      correctAnswer: "Obrisati je i obavestiti odrasle osobe",
+      correctAnswer: "Delete it and inform adults",
     },
     {
-      question: "Koje informacije nikada ne bi trebalo da deliš na internetu?",
-      answers: ["Ime i prezime", "Broj telefona", "Lozinke i brojeve kartica"],
-      correctAnswer: "Lozinke i brojeve kartica",
+      question: "Which information should you never share online?",
+      answers: ["Full name", "Phone number", "Passwords and credit card numbers"],
+      correctAnswer: "Passwords and credit card numbers",
     },
     {
-      question: "Kako možeš da se zaštitiš od fišing napada na internetu?",
+      question: "How can you protect yourself from phishing attacks online?",
       answers: [
-        "Kliknuti na linkove u svim email porukama koje dobijem",
-        "Koristiti jake lozinke i dvofaktorsku autentifikaciju",
-        "Deliti svoje lozinke sa prijateljima kako bi ih zapamtili",
+        "Click on links in all emails you receive",
+        "Use strong passwords and two-factor authentication",
+        "Share your passwords with friends to help them remember",
       ],
-      correctAnswer: "Koristiti jake lozinke i dvofaktorsku autentifikaciju",
+      correctAnswer: "Use strong passwords and two-factor authentication",
     },
     {
-      question: "Šta je najsigurnije kada koristiš javni Wi-Fi?",
+      question: "What is the safest thing to do when using public Wi-Fi?",
       answers: [
-        "Koristiti VPN (Virtuelnu privatnu mrežu)",
-        "Uneti svoje lične podatke u aplikacijama",
-        "Otvoriti sve linkove u emailovima",
+        "Use a VPN (Virtual Private Network)",
+        "Enter your personal information in apps",
+        "Open all links in emails",
       ],
-      correctAnswer: "Koristiti VPN (Virtuelnu privatnu mrežu)",
+      correctAnswer: "Use a VPN (Virtual Private Network)",
     },
     {
-      question: "Šta bi trebalo da uradiš ako neko pokuša da te zatraži tvoje lozinke na internetu?",
+      question: "What should you do if someone asks for your passwords online?",
       answers: [
-        "Onda im pošaljite lozinku kako bi rešili problem",
-        "Odmah prekinuti razgovor i prijaviti to nadležnim organima",
-        "Pokušati da ignorisete i nastavite normalno",
+        "Then send them your password to resolve the issue",
+        "Immediately end the conversation and report it to the authorities",
+        "Try to ignore it and continue as usual",
       ],
-      correctAnswer: "Odmah prekinuti razgovor i prijaviti to nadležnim organima",
+      correctAnswer: "Immediately end the conversation and report it to the authorities",
     },
     {
-      question: "Koje vrste linkova treba izbegavati?",
+      question: "Which types of links should you avoid?",
       answers: [
-        "Linkove sa poznatih i sigurnih sajtova",
-        "Linkove sa sumnjivih i nepoznatih email adresa",
-        "Linkove u porukama od prijatelja",
+        "Links from known and secure websites",
+        "Links from suspicious and unknown email addresses",
+        "Links in messages from friends",
       ],
-      correctAnswer: "Linkove sa sumnjivih i nepoznatih email adresa",
+      correctAnswer: "Links from suspicious and unknown email addresses",
     },
     {
-      question: "Kako možeš da proveriš da li je sajt na kojem se nalaziš siguran?",
+      question: "How can you check if the website you're on is secure?",
       answers: [
-        "Provjeriti da li URL počinje sa 'http' umesto 'https'",
-        "Proveriti da li ima zaključanog lokota pored URL-a",
-        "Kliknuti na sve reklame na sajtu da biste proverili da li su sigurne",
+        "Check if the URL starts with 'http' instead of 'https'",
+        "Check if there is a locked padlock next to the URL",
+        "Click on all ads on the site to check if they're safe",
       ],
-      correctAnswer: "Proveriti da li ima zaključanog lokota pored URL-a",
+      correctAnswer: "Check if there is a locked padlock next to the URL",
     },
     {
-      question: "Šta bi trebalo da uradiš ako sumnjaš da su tvoji lični podaci ukradeni?",
+      question: "What should you do if you suspect your personal data has been stolen?",
       answers: [
-        "Promeniti lozinke na svim nalozima i obavestiti banku",
-        "Ne raditi ništa, podaci nisu vredni",
-        "Reći prijateljima da ne brinu",
+        "Change passwords on all accounts and notify your bank",
+        "Do nothing, the data isn't valuable",
+        "Tell your friends not to worry",
       ],
-      correctAnswer: "Promeniti lozinke na svim nalozima i obavestiti banku",
+      correctAnswer: "Change passwords on all accounts and notify your bank",
     },
     {
-      question: "Koji je najbolji način za zaštitu svog uređaja od virusa?",
+      question: "What is the best way to protect your device from viruses?",
       answers: [
-        "Preuzeti antivirusni program i redovno ga ažurirati",
-        "Preuzimati sve aplikacije sa nepoznatih izvora",
-        "Otvoriti email poruke čak i kada nisu od poznatih pošiljalaca",
+        "Download antivirus software and update it regularly",
+        "Download all apps from unknown sources",
+        "Open email messages even if they're from unknown senders",
       ],
-      correctAnswer: "Preuzeti antivirusni program i redovno ga ažurirati",
+      correctAnswer: "Download antivirus software and update it regularly",
     },
   ];
   
@@ -101,13 +101,13 @@ function InternetSafetyGame() {
 
   return (
     <>
-    <Header title="Bezbednost na internetu"/>
+    <Header title="Internet Safety"/>
     <div className="game-container-safety">
       {isGameOver ? (
         <div className="game-over">
-          <h3>Kraj igre!</h3>
+          <h3>Game Over!</h3>
           <p>
-            Vaš rezultat je: {score} od {questions.length}
+          Your score is: {score} of {questions.length}
           </p>
         </div>
       ) : (

@@ -5,8 +5,8 @@ function Banner() {
   return (
     <div className="banner">
       <div className="banner-content">
-        <h2>SmartRazred platforma</h2>
-        <p>Spojimo znanje, komunikaciju i podršku u jedinstvenom prostoru!</p>
+        <h2>SmartClassroom platform</h2>
+        <p>Let's combine knowledge, communication, and support in a single space!</p>
       </div>
     </div>
   );

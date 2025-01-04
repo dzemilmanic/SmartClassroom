@@ -41,7 +41,7 @@ const CreateMaterial = () =>{
       try{
         const response = await fetch(`${API_URL}/users/${userId}`);
         if(!response.ok){
-          console.log("Korisnik nije pronadjen")
+          console.log("User not found")
           return;
         }
         const data = await response.json();
@@ -76,26 +76,26 @@ const CreateMaterial = () =>{
 
       if (response.ok) {
         const data = await response.json();
-        setMessage("Materijal uspešno kreiran!");
-        console.log("Novi materijal:", data);
+        setMessage("Material successfully created!");
+        console.log("New material:", data);
         navigate("/materials")
       } else {
         const errorData = await response.json();
-        setMessage(errorData.message || "Došlo je do greške.");
+        setMessage(errorData.message || "An error occurred.");
       }
     } catch (error) {
-      setMessage("Došlo je do greške prilikom kreiranja materijala.");
-      console.error("Greška:", error);
+      setMessage("An error occurred while creating the material.");
+      console.error("Error:", error);
     }
   }
 
 
     return <>
     <div className="form-container">
-      <h3>Postavljanje materijala</h3>
+      <h3>Post material</h3>
             <form className="form">
             <div className="form-control">
-            <label htmlFor="title">Naslov</label>
+            <label htmlFor="title">Title</label>
             <input
               type="text"
               name="title"
@@ -103,16 +103,16 @@ const CreateMaterial = () =>{
               required
               value={title}
               onChange={handleTitleChange}
-              placeholder="Svet oko nas"
+              placeholder="Math"
             />
           </div>
             <div className="form-control">
-            <label htmlFor="type">Tip</label>
+            <label htmlFor="type">Type</label>
             <select id="type" name="type" value={type} onChange={handleTypeChange} required>
             <option value="" disabled selected>---</option>
-            <option value="Knjiga">Knjiga</option>
-            <option value="Domaci">Domaci zadatak</option>
-            <option value="Skripta">Skripta</option>
+            <option value="Knjiga">Book</option>
+            <option value="Domaci">Homework</option>
+            <option value="Skripta">Script</option>
             </select>
           </div>
           <div className="form-control">
@@ -128,19 +128,19 @@ const CreateMaterial = () =>{
             />
           </div>
           <div className="form-control">
-            <label htmlFor="description">Opis</label>
+            <label htmlFor="description">Description</label>
             <textarea  id="description"
                 name="description"
                 rows="5" 
                 cols="40" 
-                placeholder="Unesite vašu poruku ovde..."
+                placeholder="Enter your message here..."
                 value={description}
                 onChange={handleDescriptionChange}
                 ></textarea>
           </div>
           <div className="button-container">
           <button type="button"  onClick={handleSubmit}>
-            Postavi materijal
+            Post material
             </button>
           </div>
         </form>

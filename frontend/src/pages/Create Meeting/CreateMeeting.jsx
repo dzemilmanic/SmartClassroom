@@ -25,7 +25,7 @@ const CreateMeeeting = () =>{
       try{
         const response = await fetch(`${API_URL}/users/${userId}`);
         if(!response.ok){
-          console.log("Korisnik nije pronadjen")
+          console.log("User not found")
           return;
         }
         const data = await response.json();
@@ -71,7 +71,7 @@ const CreateMeeeting = () =>{
     <div className="form-container">
             <form className="form">
             <div className="form-control">
-            <label htmlFor="title">Tema</label>
+            <label htmlFor="title">Topic</label>
             <input
               type="text"
               name="title"
@@ -79,15 +79,15 @@ const CreateMeeeting = () =>{
               required
               value={title}
               onChange={handleTitleChange}
-              placeholder="Roditeljski sastanak"
+              placeholder="Parent-teacher meeting"
             />
           </div>
           <div className="form-control">
-            <label htmlFor="title">Klik da kreirate Google meet</label>
-            <a href="https://meet.google.com/landing" target="_blank">Link za google meet</a>
+            <label htmlFor="title">Click to create a Google Meet</label>
+            <a href="https://meet.google.com/landing" target="_blank">Google Meet link</a>
           </div>
           <div className="form-control">
-            <label htmlFor="link">Unesite link</label>
+            <label htmlFor="link">Enter the link</label>
             <input
               type="text"
               name="link"
@@ -100,7 +100,7 @@ const CreateMeeeting = () =>{
           </div>
           <div className="button-container">
           <button type="button" onClick={handleSubmit}>  
-            Kreiraj obavestenje
+          Create a notification
             </button>
           </div>
         </form>

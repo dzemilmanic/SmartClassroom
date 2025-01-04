@@ -29,7 +29,7 @@ const CreateLostAndFound = () =>{
       try{
         const response = await fetch(`${API_URL}/users/${userId}`);
         if(!response.ok){
-          console.log("Korisnik nije pronadjen")
+          console.log("User not found.")
           return;
         }
         const data = await response.json();
@@ -73,10 +73,10 @@ const CreateLostAndFound = () =>{
 
     return <>
     <div className="form-container">
-            <h3>Kreiranje Teme</h3>
+            <h3>Creating a topic</h3>
             <form className="form">
             <div className="form-control">
-            <label htmlFor="title">Tema</label>
+            <label htmlFor="title">Topic</label>
             <input
               type="text"
               name="title"
@@ -84,23 +84,23 @@ const CreateLostAndFound = () =>{
               required
               value={title}
               onChange={handleTitleChange}
-              placeholder="Roditeljski sastanak"
+              placeholder="Parent-teacher meeting"
             />
           </div>
           <div className="form-control">
-            <label htmlFor="description">Opis</label>
+            <label htmlFor="description">Description</label>
             <textarea  id="description"
                 name="description"
                 rows="5" 
                 cols="40" 
-                placeholder="Opisite vasu temu ovde.."
+                placeholder="Describe your topic here..."
                 value={description}
                 onChange={handleDescriptionChange}
                 ></textarea>
           </div>
           <div className="button-container">
           {(role === "Razredni") &&<button type="button"  onClick={handleSubmit}>
-            Kreiraj obavestenje
+          Create a notification
             </button>}
           </div>
         </form>

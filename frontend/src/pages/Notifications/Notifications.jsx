@@ -11,7 +11,7 @@ const Notifications = () => {
 
   async function handleDelete(id) {
     if (role !== "Razredni") {
-      alert("Nemate pravo da brišete ovu stavku.");
+      alert("You do not have permission to delete this item..");
       return;
     }
 
@@ -21,10 +21,10 @@ const Notifications = () => {
         headers: { "Content-Type": "application/json" },
       });
       if (!response.ok) {
-        console.log("Greška: Nije uspelo brisanje");
+        console.log("Error: Delete failed");
       }
     } catch (error) {
-      console.log("Greška: " + error);
+      console.log("Error: " + error);
     }
     window.location.reload();
   }
@@ -38,13 +38,13 @@ const Notifications = () => {
       try {
         const response = await fetch(`${API_URL}/notifications`);
         if (!response.ok) {
-          console.error(`Greška: HTTP status ${response.status}`);
+          console.error(`Error: HTTP status ${response.status}`);
           return;
         }
         const data = await response.json();
         setNotifications(data);
       } catch (error) {
-        console.error("Greška prilikom dohvaćanja obaveštenja:", error);
+        console.error("Error while fetching the notification:", error);
       }
     }
     fetchAllNotifications();
@@ -52,9 +52,9 @@ const Notifications = () => {
 
   return (
     <>
-      <Header title="Obaveštenja" />
+      <Header title="Notifications" />
       <div className="material">
-        { role === "Razredni" &&<button className="add-material" onClick={handleAdd}>Kreiraj obaveštenje</button>}
+        { role === "Razredni" &&<button className="add-material" onClick={handleAdd}>Create notification</button>}
         <div className="notification-container">
           {notifications.map((notification, index) => (
             <div
@@ -66,7 +66,7 @@ const Notifications = () => {
               <h1 className="notification-title">{notification.title}</h1>
               <p className="notification-description">{notification.description}</p>
               <p className="notification-author">
-                Starešina: <strong>{notification.createdBy}</strong>
+                Teacher: <strong>{notification.createdBy}</strong>
               </p>
               <p className="notification-date">
                 {new Date(notification.date).toLocaleDateString("sr-RS", {
@@ -80,7 +80,7 @@ const Notifications = () => {
                   className="delete-button"
                   onClick={() => handleDelete(notification.id)}
                 >
-                  Obriši
+                  Delete
                 </button>
               )}
             </div>

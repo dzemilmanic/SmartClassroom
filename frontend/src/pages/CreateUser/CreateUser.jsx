@@ -64,7 +64,7 @@ const CreateUser = () =>{
         <div className="form-container">
             <form className="form">
             <div className="form-control">
-            <label htmlFor="name">Ime</label>
+            <label htmlFor="name">First Name</label>
             <input
               type="text"
               name="name"
@@ -76,7 +76,7 @@ const CreateUser = () =>{
             />
           </div>
           <div className="form-control">
-            <label htmlFor="surname">Prezime</label>
+            <label htmlFor="surname">Last Name</label>
             <input
               type="text"
               name="surname"
@@ -100,7 +100,7 @@ const CreateUser = () =>{
             />
           </div>
           <div className="form-control">
-            <label htmlFor="password">Lozinka</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
@@ -111,7 +111,7 @@ const CreateUser = () =>{
             />
           </div>
           <div className="form-control">
-            <label htmlFor="phone">Telefon</label>
+            <label htmlFor="phone">Phone</label>
             <input
               type="tel"
               name="phone"
@@ -123,7 +123,7 @@ const CreateUser = () =>{
             />
           </div>
           <div className="form-control">
-            <label htmlFor="address">Adresa</label>
+            <label htmlFor="address">Address</label>
             <input
               type="text"
               name="adress"
@@ -135,19 +135,19 @@ const CreateUser = () =>{
             />
           </div>
           <div className="form-control">
-            <label htmlFor="role">Uloga</label>
+            <label htmlFor="role">Role</label>
             <select onChange={handleRoleChange} value={role} id="role" name="role" required>
                 <option value="" disabled selected>---</option>
                 <option value="Admin">Admin</option>
-                <option value="Razredni">Razredni/Ucitelj</option>
-                <option value="Roditelj">Roditelj</option>
-                <option value="Dete">Dete</option>
+                <option value="Razredni">Class teacher/Teacher</option>
+                <option value="Roditelj">Parent</option>
+                <option value="Dete">Child</option>
             </select>
           </div>
           {/* Prikaz odeljenja samo za "Razredni/Učitelj" i "Dete" */}
 {(role === "Razredni" || role === "Dete") && (
     <div className="form-control">
-        <label htmlFor="classroom">Odeljenje</label>
+        <label htmlFor="classroom">Class</label>
         <select
             onChange={handleClassroomChange}
             id="class-section"
@@ -226,7 +226,7 @@ const CreateUser = () =>{
     </div>
 )}
        {(role === "Razredni" || role === "Dete") && ( <div className="form-control">
-            <label htmlFor="school">Osnovna skola</label>
+            <label htmlFor="school">Elementary school</label>
             <select onChange={handleSchoolChange} value={school} id="role" name="role" required>
                 <option value="" disabled selected>---</option>
                 <option value="Bratstvo">Bratstvo</option>
@@ -241,7 +241,7 @@ const CreateUser = () =>{
           </div>)}
           <div className="button-container">
           <button onClick={handleSubmit} type="button" >
-            Kreiraj korisnika
+            Create User
             </button>
           </div>
         </form>

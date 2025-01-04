@@ -10,47 +10,33 @@ function Home() {
       <Banner />
       <main className="main-content">
         <section className="features">
-          <Header title={"Uči i igraj se!"} />
+          <Header title={"Learn and play!"} />
           <div className="features-grid">
             <div className="feature-card">
-              <h3>Bezbednost na internetu</h3>
+              <h3>Internet safety</h3>
               <p>
-                Internet je postao ključni deo našeg života, ali kao i u
-                stvarnom svetu, i na internetu je potrebno biti oprezan.
-                Bezbednost na internetu je vrlo važna, posebno za decu, jer
-                internet može biti opasno mesto ako se ne koristi na pravi
-                način.
+              The internet has become a key part of our lives, but just like in the real world, it is important to be cautious online. Internet safety is very important, especially for children, because the internet can be a dangerous place if not used properly.
               </p>
               <Link to="/games/internetSafetyGame">
-                <button className="play-button">Igraj sada!</button>
+                <button className="play-button">Play now!</button>
               </Link>
             </div>
             <div className="feature-card">
-              <h3>Prepoznaj phishing poruke</h3>
+              <h3>Recognize phishing messages"</h3>
               <p>
-                Phishing je vrsta prevare u kojoj prevaranti pokušavaju da te
-                navedu da otkriješ svoje lične podatke, kao što su lozinke,
-                brojevi kartica ili drugi osjetljivi podaci, putem lažnih
-                poruka. Ove poruke mogu izgledati kao da dolaze od poznatih
-                kompanija, prijatelja ili čak učitelja, ali zapravo se radi o
-                pokušaju krađe.
+              Phishing is a type of scam where scammers try to trick you into revealing your personal information, such as passwords, credit card numbers, or other sensitive data, through fake messages. These messages may appear to come from well-known companies, friends, or even teachers, but in reality, they are an attempt to steal your information.
               </p>
               <Link to="/games/phishingGame">
-                <button className="play-button">Igraj sada!</button>
+                <button className="play-button">Play now!</button>
               </Link>
             </div>
             <div className="feature-card">
-              <h3>Slagalica pravila ponašanja</h3>
+              <h3>Puzzle rules of behavior</h3>
               <p>
-                Ova igra je zamišljena kao zabavan način da deca nauče osnovna
-                pravila ponašanja, kako na internetu, tako i u svakodnevnom
-                životu. Slagalica će omogućiti deci da povežu pravilna ponašanja
-                sa situacijama, čime će se poboljšati njihove socijalne veštine
-                i sposobnost donošenja ispravnih odluka u različitim životnim
-                okolnostima.
+              This game is designed as a fun way for children to learn basic rules of behavior, both online and in everyday life. The puzzle will allow children to match proper behaviors with situations, thereby improving their social skills and ability to make the right decisions in various life circumstances.
               </p>
               <Link to="games/etiquettePuzzle">
-                <button className="play-button">Igraj sada!</button>
+                <button className="play-button">Play now!</button>
               </Link>
             </div>
           </div>

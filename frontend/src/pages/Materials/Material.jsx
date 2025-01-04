@@ -17,10 +17,10 @@ const Material = () => {
         headers: { "Content-Type": "application/json" },
       });
       if (!response.ok) {
-        console.log("Greška: Nije uspelo brisanje");
+        console.log("Error: Deletion failed");
       }
     } catch (error) {
-      console.log("Greška: " + error);
+      console.log("Error: " + error);
     }
     window.location.reload();
   }
@@ -34,13 +34,13 @@ const Material = () => {
       try {
         const response = await fetch(`${API_URL}/materials`);
         if (!response.ok) {
-          console.error(`Greška: HTTP status ${response.status}`);
+          console.error(`Error: HTTP status ${response.status}`);
           return;
         }
         const data = await response.json();
         setMaterials(data);
       } catch (error) {
-        console.error("Greška prilikom dohvaćanja materijala:", error);
+        console.error("Error while fetching the material:", error);
       }
     }
     fetchAllMaterials();
@@ -48,11 +48,11 @@ const Material = () => {
 
   return (
     <>
-      <Header title="Materijali" />
+      <Header title="Materials" />
       <div className="material">
         {role === "Razredni" && (
           <button className="add-material" onClick={handleAdd}>
-            Dodaj materijal
+            Add material
           </button>
         )}
         <div className="materials-container">
@@ -78,7 +78,7 @@ const Material = () => {
                   rel="noopener noreferrer"
                   href={`https://${material.link}`}
                 >
-                  Link do materijala
+                  Link to the material
                 </a>
                 <p className="material-type">{material.type}</p>
                 <p className="material-date">
@@ -93,7 +93,7 @@ const Material = () => {
                     className="delete-button"
                     onClick={() => handleDelete(material.id)}
                   >
-                    Obriši
+                    Delete
                   </button>
                 )}
               </div>
