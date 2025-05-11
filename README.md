@@ -1,83 +1,92 @@
-# Full-Stack Web Application for Primary Schools
+# 🏫 Full-Stack Web Application for Primary Schools
 
-This application is designed for primary schools and allows students, teachers, parents, and administrators to access various features such as teaching materials, notifications, meetings, AI chat for class support, an image analysis API, a lost and found system, and much more.
+This web application is built to serve the needs of **students**, **teachers**, **parents**, and **administrators** in primary schools. It offers tools such as learning materials, AI chat support, image analysis, notifications, a lost-and-found system, and more.
 
-## Features
+---
 
-### For Students
+## ✨ Features
 
-- **Teaching Materials**: Access to various learning materials and assignments.
-- **AI Chat**: Chat with an AI assistant that answers questions related to the curriculum (limited to educational topics).
-- **Interactive Quiz**: A quiz on internet safety with questions and answers.
+### 👩‍🎓 For Students
 
-### For Teachers
+- 📚 **Learning Materials** – Access study resources and assignments.
+- 🤖 **AI Chat** – Ask questions related to the school curriculum (education-only mode).
+- 🔐 **Internet Safety Quiz** – Interactive quiz on safe online behavior.
 
-- **Teaching Materials**: Ability to add new teaching materials.
-- **Notifications**: Sending notifications to students and parents about important events.
-- **Meetings**: Organizing meetings with students and parents.
+### 👩‍🏫 For Teachers
 
-### For Parents
+- ➕ **Upload Teaching Materials** – Add assignments and resources.
+- 🔔 **Send Notifications** – Inform students and parents about events.
+- 🧑‍💼 **Organize Meetings** – Schedule meetings with students and parents.
 
-- **Notifications**: Access to notifications related to their children and the school.
-- **Meetings**: Ability to participate in meetings with teachers and class leaders.
+### 👨‍👩‍👧 For Parents
 
-### For Administrators
+- 📩 **Receive Notifications** – Stay updated with school announcements.
+- 👥 **Join Meetings** – Participate in teacher-parent meetings.
 
-- **User Management**: Adding new users (students, teachers, parents).
+### 🛠️ For Administrators
 
-### Additional Features
+- 👤 **User Management** – Add and manage students, teachers, and parents.
 
-- **AI Image Analysis API**: Send an image and get a description of what is in the image (used for educational purposes).
-- **Lost and Found**: A system for reporting and viewing lost and found items within the school.
-- **Edit User Profile**: Users can change their personal details and settings.
+---
 
-## Technologies
+## 🧠 Additional Features
 
-- **Frontend**: React.js
-- **Backend**: Node.js +
-  - JWT (JSON Web Token) for user authentication
-- **AI API**: Uses external APIs for image analysis and generating responses in the AI chat
+- 🖼️ **AI Image Analysis** – Upload an image and get a descriptive analysis (educational use).
+- 🧳 **Lost and Found System** – Report and browse lost and found items.
+- 📝 **Edit Profile** – All users can update their profile and preferences.
 
-## Running the Application
+---
 
-1. **Frontend Installation**
+## 🧰 Tech Stack
 
-   - Clone or download the repository:
-     ```bash
-     git clone https://github.com/DzemilManic/SmartClassroom.git
-     ```
-   - Navigate to the frontend directory:
-     ```bash
-     cd SmartClassroom/frontend
-     ```
-   - Install dependencies:
-     ```bash
-     npm install
-     ```
-   - Run the application:
-     ```bash
-     npm run dev
-     ```
+- **Frontend**: React.js ⚛️
+- **Backend**: Node.js + Express.js 🚀
+- **Authentication**: JWT (JSON Web Tokens) 🔐
+- **AI Services**: External APIs for image analysis and AI chat 📡
 
-2. **Backend Installation**
-   - Navigate to the backend directory:
-     ```bash
-     cd SmartClassroom/server
-     ```
-   - Install dependencies:
-     ```bash
-     npm install
-     ```
-   - Start the server:
-     ```bash
-     npm start
-     ```
+---
 
-## Contributing
+## 🚀 Getting Started
 
-If you want to contribute to the development of this application, you can open a pull request or report bugs through [issues](https://github.com/DzemilManic/SmartRazred/issues).
+### 1. 🖥️ Frontend Setup
 
-## License
+```bash
+git clone https://github.com/DzemilManic/SmartClassroom.git
+cd SmartClassroom/frontend
+npm install
+npm run dev
+```
 
-This application is licensed under the [MIT License](LICENSE).
-"""
+The app will be running at `http://localhost:5173`
+
+---
+
+### 2. 🔧 Backend Setup
+
+```bash
+cd ../server
+npm install
+npm start
+```
+
+The server will run at `http://localhost:3000`
+
+---
+
+## 🤝 Contributing
+
+Want to help improve this project?  
+You're welcome to open a [pull request](https://github.com/DzemilManic/SmartClassroom/pulls) or submit issues on the [issue tracker](https://github.com/DzemilManic/SmartRazred/issues).
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+Thanks to the open-source community for libraries and tools that made this project possible.
+
